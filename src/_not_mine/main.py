@@ -1,5 +1,4 @@
-from inspect import currentframe
-from inspect import getframeinfo
+import inspect
 import urwid
 
 def main():
@@ -12,7 +11,7 @@ def main():
 	#
 	# loop.run()
 
-	print("\n", "-" * 4, " ", getframeinfo(currentframe()).lineno, " ", "-" * 4, "\n", sep = "")
+	print("\n", "-" * 4, " ", inspect.getframeinfo(inspect.currentframe()).lineno, " ", "-" * 4, "\n", sep = "")
 
 	def exit_on_q(key):
 		if key in ("q", "Q"):
@@ -30,7 +29,7 @@ def main():
 
 	loop.run()
 
-	print("\n", "-" * 4, " ", getframeinfo(currentframe()).lineno, " ", "-" * 4, "\n", sep = "")
+	print("\n", "-" * 4, " ", inspect.getframeinfo(inspect.currentframe()).lineno, " ", "-" * 4, "\n", sep = "")
 
 if __name__ == '__main__':
 	main()
