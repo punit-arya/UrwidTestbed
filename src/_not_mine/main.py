@@ -1,5 +1,6 @@
 import inspect
 import urwid
+import os
 
 def main():
 	# http://urwid.org/tutorial/index.html
